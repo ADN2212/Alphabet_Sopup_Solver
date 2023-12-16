@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<title>ALS</title>
+</head>
+<body>
+	<div>
+		<center>
+		<h1>Alphabet Soup Solver</h1>
+			<p id = "header-p">
+				Bienvenido/a Alphabet Soup Solver, con el poderosísimo algoritmo de esta revolucionaria aplicación web, usted podrá dar solución a las sopas de letras más complejas e intrincadas que haya visto en su vida. Bastará con subir <b>(ver instrucciones)</b> la sopa de letras que quiera resolver, para luego escribir la palabra que quiera buscar y, con un simple clic, saber si está o no en la sopa de letras que ha ingresado.
+			</p>
+		</center>
+	</div>
+	<div id = "mainDiv" class="horizontal">
+		<div id = "left-div">
+			<h4><u>Tu Sopa de Letras</u></h4>
+			<div id = "letters-container"></div>
+		</div>
+		<div id='search-bar'>
+			<center>
+				<h3><u>Buscar Palabra</u></h3>
+    	</center>
+    	<!-- <form id = "search-form"> -->
+    		<div class="horizontal" id = "inner-search-bar">
+        	<input type="text" id="letter-input" onkeydown = "return /[a-z]/i.test(event.key)">
+        	<button type="submit" id="search-button" class="generalButton"> Buscar </button>
+    		</div>
+    	<!-- </form> -->
+    	<h4 id = "word-list-header">Palabras Encontradas:</h4>
+			<ul id="word-list">
+				<!-- <li>Ana</li> -->
+			</ul>
+		</div>
+	</div>
+	<div id = "instrucs-div" class = "instrucs-div-hide">
+	</div>
+	<div id = "bottom-options" class="horizontal">
+    <button id = "instrucs-button"class="generalButton">
+    	Instrucciones
+    </button>
+		<input type="file" id="fileInput" accept=".txt" />
+		<button id='deletter' class="generalButton">
+			Borrar
+		</button>
+	</div>
+</body>
+	<script type="text/javascript" src="LoaderModule.js"></script>
+	<script type="text/javascript" src="DeleterModule.js"></script>
+	<script type="text/javascript" src="SearcherModule.js"></script>
+	<script type="text/javascript" src="UtilsModule.js"></script>
+	<script type="text/javascript" src="placeHolder.js"></script>
+	<script type="text/javascript" src="instructionsModule.js"></script>
+</html>
